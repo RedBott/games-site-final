@@ -1,12 +1,19 @@
-body {
-    margin-top: 40px;
-    background: #485b6e;
-        color: #fff;
-        font-family: Helvetica;
-    font-weight: bold;
-    text-align:center;
+@font-face {
+  font-family: "Pixel";
+  src: url('../assets/fonts/slkscr-webfont.eot');
+  src: url("../assets/fonts/slkscr-webfont.woff2") format("woff2"),url("../assets/fonts/slkscr-webfont.woff") format("woff"),url("../assets/fonts/slkscr.ttf") format("truetype");
 }
+body{
+    background-image: url("../assets/background.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    object-fit: cover;
+    font-family: "Pixel",Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-align: center;
 
+}
 h1 {
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -34,8 +41,8 @@ h1 {
     text-decoration:none;
     width: 100px;
     height: 100px;
-    background: #f1f1f1;
-    border: 1px solid #ccc;
+    background: #240626;
+    border: 1px solid  #6adff4;
     border-right: 1px solid #fff;
     cursor: pointer;
     text-transform: uppercase;
@@ -47,12 +54,12 @@ h1 {
 
 #game > li.x {
     font-size: 40px;
-    color: #ed4e6e
+    color:red;
 }
 
 #game > li.o {
     font-size: 40px;
-    color: #485b6e;
+    color: blue;
 }
 
 #game > li:hover {
@@ -68,11 +75,19 @@ h1 {
 #nfo {
     text-align:center;
     margin-top: 10px;
+    color:whitesmoke;
 }
 
 #whos-turn > span,
 #game-messages > span {
     display: none;
+    color:whitesmoke;
+}
+#player-one-score {
+    color:red;
+}
+#player-two-score{
+    color:blue;
 }
 
 #whos-turn.x span.x,
@@ -83,22 +98,176 @@ h1 {
     display: block;
     margin-top: 10px;
 }
-
-#reset-game {
+button {
+    background: none;
+    border:none;
+}
+img:hover {
+    transform: scale(1.1);
+}
+.glitch {
+    position: relative;
+    margin: 0 auto;
+    margin-top:4%;
+    margin-bottom: 4%;
+    color:black;
+    font-size: 50px;
+    font-family: "Pixel", sans-serif;
+    font-weight: 600;
     text-align: center;
-        border: none;
-        padding: 0.6em 1.2em;
-        background: #ed4e6e;
-        color: #fff;
-        font-size: 1em;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        cursor: pointer;
-        display: inline-block;
-        margin: 3px 2px;
-        border-radius: 2px;
-}
-
-#reset-game:hover {
-        background: #2c3e52;
-}
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+.glitch::before, .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    background:transparent;
+    color:#6adff4;
+    clip: rect(0, 900px, 0, 0);
+  }
+.glitch::before {
+    left: 7px;
+    text-shadow: 1px 0 green;
+    animation: glitch-effect 3s infinite linear alternate-reverse;
+  }
+.glitch::after {
+    left: 3px;
+    text-shadow: -1px 0 red;
+    animation: glitch-effect 2s infinite linear alternate-reverse;
+  }
+@-webkit-keyframes glitch-effect {
+    0% {
+      clip: rect(46px, 9999px, 92px, 0);
+    }
+    5% {
+      clip: rect(93px, 9999px, 33px, 0);
+    }
+    10% {
+      clip: rect(57px, 9999px, 25px, 0);
+    }
+    15% {
+      clip: rect(80px, 9999px, 82px, 0);
+    }
+    20% {
+      clip: rect(25px, 9999px, 31px, 0);
+    }
+    25% {
+      clip: rect(12px, 9999px, 63px, 0);
+    }
+    30% {
+      clip: rect(69px, 9999px, 7px, 0);
+    }
+    35% {
+      clip: rect(86px, 9999px, 52px, 0);
+    }
+    40% {
+      clip: rect(87px, 9999px, 16px, 0);
+    }
+    45% {
+      clip: rect(36px, 9999px, 74px, 0);
+    }
+    50% {
+      clip: rect(41px, 9999px, 31px, 0);
+    }
+    55% {
+      clip: rect(44px, 9999px, 1px, 0);
+    }
+    60% {
+      clip: rect(42px, 9999px, 76px, 0);
+    }
+    65% {
+      clip: rect(11px, 9999px, 20px, 0);
+    }
+    70% {
+      clip: rect(88px, 9999px, 2px, 0);
+    }
+    75% {
+      clip: rect(57px, 9999px, 45px, 0);
+    }
+    80% {
+      clip: rect(19px, 9999px, 52px, 0);
+    }
+    85% {
+      clip: rect(12px, 9999px, 61px, 0);
+    }
+    90% {
+      clip: rect(32px, 9999px, 31px, 0);
+    }
+    95% {
+      clip: rect(3px, 9999px, 10px, 0);
+    }
+    100% {
+      clip: rect(49px, 9999px, 14px, 0);
+    }
+  }
+@keyframes glitch-effect {
+    0% {
+      clip: rect(46px, 9999px, 92px, 0);
+    }
+    5% {
+      clip: rect(93px, 9999px, 33px, 0);
+    }
+    10% {
+      clip: rect(57px, 9999px, 25px, 0);
+    }
+    15% {
+      clip: rect(80px, 9999px, 82px, 0);
+    }
+    20% {
+      clip: rect(25px, 9999px, 31px, 0);
+    }
+    25% {
+      clip: rect(12px, 9999px, 63px, 0);
+    }
+    30% {
+      clip: rect(69px, 9999px, 7px, 0);
+    }
+    35% {
+      clip: rect(86px, 9999px, 52px, 0);
+    }
+    40% {
+      clip: rect(87px, 9999px, 16px, 0);
+    }
+    45% {
+      clip: rect(36px, 9999px, 74px, 0);
+    }
+    50% {
+      clip: rect(41px, 9999px, 31px, 0);
+    }
+    55% {
+      clip: rect(44px, 9999px, 1px, 0);
+    }
+    60% {
+      clip: rect(42px, 9999px, 76px, 0);
+    }
+    65% {
+      clip: rect(11px, 9999px, 20px, 0);
+    }
+    70% {
+      clip: rect(88px, 9999px, 2px, 0);
+    }
+    75% {
+      clip: rect(57px, 9999px, 45px, 0);
+    }
+    80% {
+      clip: rect(19px, 9999px, 52px, 0);
+    }
+    85% {
+      clip: rect(12px, 9999px, 61px, 0);
+    }
+    90% {
+      clip: rect(32px, 9999px, 31px, 0);
+    }
+    95% {
+      clip: rect(3px, 9999px, 10px, 0);
+    }
+    100% {
+      clip: rect(49px, 9999px, 14px, 0);
+    }
+  }

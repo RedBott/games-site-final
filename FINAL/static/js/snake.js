@@ -53,7 +53,7 @@ class Canvas {
 	}
 
 	addText(text) {
-		this.context.fillStyle = '#7cf20a'
+		this.context.fillStyle = '#6adff4'
 		this.context.fillText(text, this.width / 2, this.height / 2)
 	}
 
@@ -62,7 +62,7 @@ class Canvas {
 		this.addElement(element)
 	}
 
-	addElement({x, y, width = 20, height = 20, color = '#7cf20a'}) {
+	addElement({x, y, width = 20, height = 20, color = '#6adff4'}) {
 		this.context.fillStyle = color
 		this.context.fillRect(x, y, width, height)
 		this.context.lineWidth = 1
@@ -299,7 +299,7 @@ class Snake {
 		this.canvas.draw({
 			x: this.foodX,
 			y: this.foodY,
-			color: '#e1fcc8'
+			color: '#fff'
 		})
 
 		this.tail.map((piece) => {

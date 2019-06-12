@@ -1,24 +1,35 @@
-<html>
-    <head>
-        <title>TIC TAC TOE</title>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TicTacToe</title>
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
     <link rel="stylesheet" href="css/tictactoe.css">
     <body>
         <div class="container">
-            <h1>Tic-Tac-Toe</h1>
+            <h1 class="glitch" data-text="TIC-TAC-TOE">TIC-TAC-TOE</h1>
             <ul id="game">
+                <!-- first row -->
                 <li data-pos="0,0"></li>
                 <li data-pos="0,1"></li>
                 <li data-pos="0,2"></li>
+                <!-- second row -->
                 <li data-pos="1,0"></li>
                 <li data-pos="1,1"></li>
                 <li data-pos="1,2"></li>
+                <!-- third row -->
                 <li data-pos="2,0"></li>
                 <li data-pos="2,1"></li> 
                 <li data-pos="2,2"></li>
             </ul>
             
-            <button id="reset-game">Reset Game</button>
+            <button id="reset-game">
+                <img src="assets/reset.png" alt="reset" style="width:96px;height:33px;">
+            </button>
+            
+            <!-- Game Messages -->
             <div id="game-messages">
                 <span class="player-x-win">Player One Wins</span>
                 <span class="player-o-win">Player Two Wins</span>
@@ -39,6 +50,10 @@
                 </div>
             </aside>
         </div>
+        <div class="leaderboard">
+            <!--- LEADERBOARD -->
+        </div>
     </body>
     <script src="js/tictactoe.js"></script>
+</head>
 </html>

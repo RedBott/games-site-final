@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>mines</title>
-    <link rel="stylesheet" type="text/css" href="css/mines.css">
+    <title>MineSweeper</title>
+    <link rel="stylesheet" href="css/mines.css">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
 </head>
 <body>
-    <H1>Minesweeper</H1>
-    <table id=grid></table>
-    <BUTTON onclick="generateGrid();">Reset Grid</BUTTON>
-    <script src="js/mines.js"></script>
+    <div class="game-container">
+        <div class="minesweeper">
+            <h1 class="glitch" data-text="MINESWEEPER">MINESWEEPER</h1>
+            <table id=grid>
+            </table>
+            <button onclick="generateGrid();">
+                    <img src="assets/reset.png" alt="PLAY">
+            </button>
+            <script src="js/mines.js"></script>
+        </div>
+    </div>
+    <div class="leaderboard">
+        <!--- TEMPLATE ENGINE --->
+    </div>
+    
 </body>
 </html>
