@@ -1,0 +1,40 @@
+body{
+    background-image: url('https://cdn.dribbble.com/users/1729034/screenshots/4898624/attachments/1099261/gamepad_2b.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+header {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+}
+        
+#choices, #title, #piece, #whosTurn{
+    color: black;
+    text-align: center;
+}
+        
+#p1, #p2{
+    font-size: 50px;
+    padding: 60px;
+    color: black;
+    cursor: pointer;
+    height: 166px;
+    transition: 2s;
+}
+
+#p1 > p, #p2 > p{
+    font-size: 30px;
+    margin-top: 10px;
+}
+        
+#p1:hover, #p2:hover{
+    font-size: 50px;
+    padding: 60px;
+    cursor: pointer;
+    height: 166px;
+    background-color: orange;
+    color: black;
+}
