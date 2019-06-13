@@ -194,3 +194,45 @@ header {
 .button-container > img:hover{
     transform: scale(1.1);
 }
+
+.popup-container {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  align-self: center;
+  align-items: center;
+  background-color: rgba(102, 33, 107, 0.8);
+  background-blend-mode: soft-light;
+  width: 90rem;
+  height: 500px;
+  margin-left: 2%;
+  margin-top: 5%;
+  border-radius: 5%;
+  box-shadow: 5px 5px 5px black;
+}
+
+.mines-popup, .tictactoe-popup, .snake-popup  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  width: 33%;
+  height: 70%;
+}
+
+.mines-popup > img, .tictactoe-popup > img, .snake-popup > img {
+  display: flex;
+  align-self: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 2%;
+}
+.mines-popup >p, .tictactoe-popup>p, .snake-popup > p{
+  font-family: 'Pixel',Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 300px;
+  color: #6adff4;
+}
+.mines-popup:hover, .tictactoe-popup:hover, .snake-popup:hover{
+  transform: scale(1.1);
+}
