@@ -50,7 +50,20 @@ button>img{
 button>img:hover{
   transform: scale(1.1);
 }
+.top-items{
+  display:flex;
+  justify-content:space-around;
+}
+.back-icon{
+  display: flex;
+  align-self: flex-start;
+  margin-left:2%;
+  margin-top:2%;
+}
 .glitch {
+  display: flex;
+  align-self: center;
+  left:-3%;
   position: relative;
   margin: 0 auto;
   margin-top:2%;

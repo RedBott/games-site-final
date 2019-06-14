@@ -1,4 +1,4 @@
-function popUpGames() {
+function popUpGames () {
     const butn = document.getElementsByClassName("button-container")[0];
     const container = document.createElement('div');
     butn.parentElement.appendChild(container);
@@ -43,5 +43,6 @@ function popUpGames() {
     mines.appendChild(minesName);
     snake.appendChild(snakeName);
     tictactoe.appendChild(tictactoeName);
+    const userName = document.getElementById('username');
+    userName.parentElement.parentElement.removeChild(userName.parentElement);
   }
-

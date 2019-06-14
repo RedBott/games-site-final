@@ -317,3 +317,56 @@ class Snake {
 }
 
 new Snake()
+
+
+var leaders= [
+	{
+	name:"James Gun",
+	points:"124321"},
+	{
+	name:"Brandon Jackson",
+	points:"28415"},
+	{
+	name:"Johnny Okay",
+	points:"14231"},
+	{
+	name:"Gunther Lewis",
+	points:"2321"},
+	{
+	name:"Bran Jacks",
+	points:"23134"},
+	{
+		name:"Bran Jacks",
+		points:"23134"},
+		{
+			name:"Bran Jacks",
+			points:"23134"},
+			{
+				name:"Bran Jacks",
+				points:"23134"},
+				{
+					name:"Bran Jacks",
+					points:"23134"},
+					{
+						name:"Bran Jacks",
+						points:"23134"}
+  ];
+  var x;
+  
+  for (x in leaders){
+	document.getElementById('board').innerHTML+=
+	 '<li class="rank">'+
+	  '<h2 class="name">'
+		+leaders[x].name+
+	  '</h2>'+
+		'<small class="pts">'
+		  +leaders[x].points+
+	   '</small></li>';
+	console.log(leaders[x]);
+	
+	
+	
+   
+  
+  }
+  
