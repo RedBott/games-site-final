@@ -2,7 +2,6 @@ const KEY_LEFT = 37
 const KEY_UP = 38
 const KEY_RIGHT = 39
 const KEY_DOWN = 40
-
 document.body.classList.toggle('has-focus', document.hasFocus())
 
 window.onfocus = () => {
@@ -227,6 +226,25 @@ class Snake {
 			this.setup()
 			this.start()
 		}, 1000)
+		const p = document.getElementById('p').innerText;
+		var x;
+		var leaders = [
+			{
+				name : p,
+				points : this.length
+			}
+		]
+		for (x in leaders){
+		document.getElementById('board').innerHTML+=
+			'<li class="rank">'+
+			  '<h2 class="name">'
+				+leaders[x].name+
+			  '</h2>'+
+				'<small class="pts">'
+				  +leaders[x].points+
+			   '</small></li>';
+		
+		  }
 	}
 
 	begin() {
@@ -289,7 +307,7 @@ class Snake {
 		if (this.wentOutside() || this.touched()) {
 			return this.restart()
 		}
-
+		
 		this.draw()
 	}
 
@@ -313,60 +331,13 @@ class Snake {
 			x: this.x,
 			y: this.y
 		})
+	
 	}
+	
 }
 
-new Snake()
+new Snake();
 
 
-var leaders= [
-	{
-	name:"James Gun",
-	points:"124321"},
-	{
-	name:"Brandon Jackson",
-	points:"28415"},
-	{
-	name:"Johnny Okay",
-	points:"14231"},
-	{
-	name:"Gunther Lewis",
-	points:"2321"},
-	{
-	name:"Bran Jacks",
-	points:"23134"},
-	{
-		name:"Bran Jacks",
-		points:"23134"},
-		{
-			name:"Bran Jacks",
-			points:"23134"},
-			{
-				name:"Bran Jacks",
-				points:"23134"},
-				{
-					name:"Bran Jacks",
-					points:"23134"},
-					{
-						name:"Bran Jacks",
-						points:"23134"}
-  ];
-  var x;
-  
-  for (x in leaders){
-	document.getElementById('board').innerHTML+=
-	 '<li class="rank">'+
-	  '<h2 class="name">'
-		+leaders[x].name+
-	  '</h2>'+
-		'<small class="pts">'
-		  +leaders[x].points+
-	   '</small></li>';
-	console.log(leaders[x]);
-	
-	
-	
-   
-  
-  }
+
   
